@@ -54,14 +54,15 @@ void myline(int x1,int y1,int x2,int y2)
 int main()
 {
 	int gd=DETECT,gm;
-	initgraph(&gd,&gm,NULL);
+	printf("Anurag EN16IT301025\n");
 	int x1,x2,y1,y2,xmin,xmax,ymin,ymax;
 	x1=100,y1=200,x2=190,y2=100;
-	printf("Enter x1 y1 x2 y2");
+	printf("Enter x1 y1 x2 y2\n");
 	scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+	initgraph(&gd,&gm,NULL);
 	myline(x1,y1,x2,y2);
-	setcolor(RED);
-	line(x1,y1,x2,y2);
+	//setcolor(RED);
+	//line(x1,y1,x2,y2);
 	getch();
 	closegraph();
 	return 0;
