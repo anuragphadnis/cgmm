@@ -3,13 +3,13 @@
 void bham(int x1,int y1,int  x2,int y2)
 {
 		int dx=x2-x1;
-		int dy=y2-y1,x,y;
+		int dy=y2-y1,x,y,i=0;
 		double p=2*dy-dx;
-		x=x1;y=y1;
-		int i=0;
+		x=x1;
+		y=y1;
 		while(i<(4*dx))
 		{
-			putpixel(x,y,WHITE);
+			putpixel(x,y,DARKGRAY);
 			if(p<0)
 			{
 				x++;
@@ -27,22 +27,23 @@ void bham(int x1,int y1,int  x2,int y2)
 }
 int main()
 {
-		int x1,x2,y1,y2,gd=DETECT,gm;
-		
-		printf("\nAnurag Phadnis EN16IT301025");
-		initgraph(&gd,&gm,NULL);
-		bham(50+50,50+10,50+40,50+40);//top to bottom left
-		bham(50+50,50+10,50+60,50+40);//top to bottomright
-		bham(50+20,50+25,50+80,50+25);//center left to center right
-		bham(50+40,50+40,50+80,50+25);//center right to bottom left
-		bham(50+60,50+40,50+20,50+25);//center left to bottom right
+	int x1,x2,y1,y2,gd=DETECT,gm;
+	initgraph(&gd,&gm,"");
+	printf("\nAnurag Phadnis EN16IT301025");
+	setbkcolor(WHITE);
+	setcolor(DARKGRAY);
+	bham(50+150,50+110,50+140,50+140);//top to bottom left
+	bham(50+150,50+110,50+160,50+140);//top to bottomright
+	bham(50+120,50+125,50+180,50+125);//center left to center right
+	bham(50+140,50+140,50+180,50+125);//center right to bottom left
+	bham(50+160,50+140,50+120,50+125);//center left to bottom right
 
-		line(50,10,40,50);//top to bottom left
-		line(50,10,60,50);//top to bottomright
-		line(30,25,70,25);//center left to center right
-		line(40,50,70,25);//center right to bottom left
-		line(60,50,30,25);//center left to bottom right
-		getch();
-		closegraph();
-	return 0;
+	line(150,110,140,150);//top to bottom left
+	line(150,110,160,150);//top to bottomright
+	line(130,125,170,125);//center left to center right
+	line(140,150,170,125);//center right to bottom left
+	line(160,150,130,125);//center left to bottom right
+	getch();
+	closegraph();
+return 0;
 }
